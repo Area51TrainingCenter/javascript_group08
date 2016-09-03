@@ -8,3 +8,12 @@ elemento.style.fontWeight = "normal";
 elemento.style.fontStyle = "italic";
 
 document.body.appendChild(elemento);
+
+var ladrido = document.createElement("audio");
+ladrido.src = "guau.mp3";
+// ladrido.controls = "true";
+ladrido.play();
+
+// document.body.appendChild(ladrido);
+
+// <audio src="guau.mp3" controls="true"></audio>
