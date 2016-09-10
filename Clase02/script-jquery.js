@@ -1,0 +1,2 @@
+	alert("Evento click disparado");
+})

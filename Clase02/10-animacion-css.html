@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		div {
+			background-image: url(adam.png);
+			width:120px;
+			height: 182px;
+		}
+
+		.animacion {
+			animation: cambiarPersonaje 1s steps(8) infinite;
+		}
+
+		@keyframes cambiarPersonaje {
+			100% {
+				background-position-x: -960px; 
+			}
+		}
+
+	</style>
+</head>
+<body>
+
+	<div></div>
+	<button>Animar</button>
+
+	<script src="mi-jquery.js"></script>
+	<script src="script-animacion-css.js"></script>
+	
+</body>
+</html>
