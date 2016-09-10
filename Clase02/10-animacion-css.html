@@ -11,12 +11,19 @@
 		}
 
 		.animacion {
-			animation: cambiarPersonaje 1s steps(8) infinite;
+			animation: cambiarPersonaje 1.1s  steps(8)  infinite,
+				mover 8s linear infinite reverse;
 		}
 
 		@keyframes cambiarPersonaje {
 			100% {
 				background-position-x: -960px; 
+			}
+		}
+
+		@keyframes mover {
+			100% {
+				transform: translateX(800px);
 			}
 		}
 
