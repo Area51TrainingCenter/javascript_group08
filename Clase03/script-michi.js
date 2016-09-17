@@ -1,6 +1,20 @@
-var celdas = document.getElementsByTagName("td");
+var celdas = document.getElementsByTagName("td"),
+	btnReset = document.getElementById("reset");
 
 var turno = 1;
+var finJuego = false;
+
+btnReset.addEventListener("click", function(){
+	turno = 1;
+	for(var ind=0; ind<celdas.length; ind++) {
+		celdas[ind].innerHTML = "";
+		celdas[ind].style.backgroundColor = "";
+	}
+
+	this.style.display = "none";
+
+	finJuego = false;
+})
 
 function marcarCelda(ref) {
 	if(ref.innerHTML==""){
@@ -18,6 +32,12 @@ function marcarCelda(ref) {
 
 function combGanadora(a, b, c, letra) {
 	var comb = celdas[a].innerHTML==letra && celdas[b].innerHTML==letra && celdas[c].innerHTML==letra;
+
+	if(comb) {
+		celdas[a].style.backgroundColor = "yellow";
+		celdas[b].style.backgroundColor = "yellow";
+		celdas[c].style.backgroundColor = "yellow";
+	}
 
 	return comb;
 }
@@ -62,15 +82,25 @@ function verificarEmpate() {
 	return true;
 }
 
-function fnClickEnCelda(evt) {
-	marcarCelda(this);
-	var estado = verificarGanador();
+function mostrarBotonReiniciar(){
+	btnReset.style.display = "block";
+}
 
-	if(estado) {
-		alert(estado);
-	} else {
-		if(verificarEmpate()) {
-			alert("Ocurrió un empate");
+function fnClickEnCelda(evt) {
+	if(!finJuego) {
+		marcarCelda(this);
+		var estado = verificarGanador();
+
+		if(estado) {
+			alert(estado);
+			mostrarBotonReiniciar();
+			finJuego = true;
+		} else {
+			if(verificarEmpate()) {
+				alert("Ocurrió un empate");
+				mostrarBotonReiniciar();
+				finJuego = true;
+			}
 		}
 	}
 }
