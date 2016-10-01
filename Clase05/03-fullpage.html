@@ -1,0 +1,65 @@
+<!doctype>
+<html>
+	<head>
+		<meta charset="utf8">
+		<link rel="stylesheet" href="fullpage/jquery.fullpage.min.css">
+		<link rel="stylesheet" href="animate.css">
+		<style>
+			.fondo1 {
+				background-image: url(estadio1.jpg);
+				background-size: cover
+			}
+			.fondo2 {
+				background-image: url(estadio2.jpg);
+				background-size: cover
+			}
+			.fondo3 {
+				background-image: url(estadio3.jpg);
+				background-size: cover
+			}
+			.fondo4 {
+				background-image: url(estadio4.jpg);
+				background-size: cover
+			}
+			.fondo5 {
+				background-image: url(estadio5.jpg);
+				background-size: cover
+			}
+
+			h1 {
+				font-family: Verdana;
+				font-size:50px;
+				color: white;
+				background-color: black; 
+				width: 60%;
+				padding:20px 60px;
+				margin:0 auto;
+				text-align: center;
+			}
+
+			video {
+				width:100%;
+				z-index:10;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="contenedor">
+			<div class="section fondo1"><h1 class="animated">Estadio 01</h1></div>
+			<div class="section fondo2"><h1 class="animated">Estadio 02</h1></div>
+			<div class="section fondo3">
+				<video src="flowers.mp4" type="video/mp4"></video>
+			</div>
+			<div class="section fondo4"><h1 class="animated">Estadio 04</h1></div>
+			<div class="section fondo5"><h1 class="animated">Estadio 05</h1></div>
+		</div>
+
+
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+		<script src="fullpage/jquery.fullpage.min.js"></script>
+
+		<script src="script-fullpage.js"></script>
+	</body>
+</html>

@@ -2,13 +2,30 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="fancybox/jquery.fancybox.css">
+		<style>
+			.fancybox-close {
+			    top: auto;
+    			bottom: 20px;
+    		}
+		</style>
 	</head>
 
 	<body>
+
+		<a class="ejecutar" href="#mostrarVideo">Clic para ver el video</a>
+
+		<input type="button" id="btnMostrarTexto" value="Clic para mostrar texto">
+		
+		<div id="mostrarVideo" style="display: none">
+			<video controls>
+				<source src="flowers.mp4" type="video/mp4">
+			</video>
+			<button>Cerrar video</button>
+		</div>
 	
 
 		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script src="fancybox/jquery.fancybox.pack.js"></script>
-		<script src="script-fancybox-video.js"></script>
+		<script src="script-fancybox-modal.js"></script>
 	</body>
 </html>
