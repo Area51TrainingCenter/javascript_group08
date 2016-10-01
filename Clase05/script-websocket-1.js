@@ -1,4 +1,4 @@
-var ws = new WebSocket("ws://127.0.0.1:9000", "echo-protocol");
+var ws = new WebSocket("ws://159.203.86.61:9000", "echo-protocol");
 
 var boton = document.getElementById("btn"),
 	txt = document.getElementById("mensaje"),
