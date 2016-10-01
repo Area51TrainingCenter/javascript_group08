@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.contenedor {
+			width: 500px;
+			margin:60px auto;
+		}
+
+		.cartelera {
+			width:500px;
+			height: 500px;
+			perspective: 1000px;
+		}
+
+		.pelicula {
+			width:500px;
+			height: 500px;
+			transform-style: preserve-3d;
+			transform: translateZ(-250px);
+			position:relative;
+			transition: all 350ms;
+		}
+
+		.poster {
+			width:500px;
+			height: 500px;
+			position: absolute;
+			background-color: magenta;
+			transform: translateZ(250px);
+			backface-visibility: hidden;
+		}
+
+		.info {
+			width:500px;
+			height: 500px;
+			position: absolute;
+			background-color: blue;
+			transform: rotateY(90deg) translateZ(250px);
+		}
+
+		.horarios {
+			width:500px;
+			height: 500px;
+			position: absolute;
+			background-color: navy;
+			transform: translateZ(-250px) rotateY(180deg);
+		}
+
+		.criticas {
+			width:500px;
+			height: 500px;
+			position: absolute;
+			background-color: brown;
+			transform: rotateY(-90deg) translateZ(250px);
+		}
+	</style>
+</head>
+<body>
+
+	<div class="contenedor">
+		<div class="cartelera">
+			<div class="pelicula">
+				<div class="poster"></div>
+				<div class="info"></div>
+				<div class="horarios"></div>
+				<div class="criticas"></div>
+			</div>
+		</div>
+	</div>
+
+	<script src="script-cartelera.js"></script>
+	
+</body>
+</html>

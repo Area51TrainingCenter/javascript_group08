@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		html, body {
+			width:100%;
+			height: 100%;
+		}
+		body {
+			margin:0;
+			padding:0;
+		}
+		.paginas {
+			width:100%;
+			height: 100%;
+			perspective: 9000px;
+		}
+
+		.contenido {
+			width:100%;
+			height: 100%;
+			transform-style: preserve-3d;
+			/*transform: translateZ(-250px);*/
+			position:relative;
+			transition: all 350ms;
+			margin:50px auto;
+		}
+
+		.poster {
+			width:100%;
+			height: 100%;
+			position: absolute;
+			background-color: magenta;
+	/*		transform: translateZ(250px);*/
+			backface-visibility: hidden;
+		}
+
+		.info {
+			width:100%;
+			height: 100%;
+			position: absolute;
+			background-color: blue;
+		/*	transform: rotateY(90deg) translateZ(250px);*/
+		}
+
+		.horarios {
+			width:100%;
+			height: 100%;
+			position: absolute;
+			background-color: navy;
+			/*transform: translateZ(-250px) rotateY(180deg);*/
+		}
+
+		.criticas {
+			width:100%;
+			height: 100%;
+			position: absolute;
+			background-color: brown;
+			transform: rotateY(-90deg) translateZ(250px);
+		}
+	</style>
+</head>
+<body>
+		<div class="paginas">
+			<div class="contenido">
+				<div class="poster"></div>
+				<div class="info"></div>
+				<div class="horarios"></div>
+				<div class="criticas"></div>
+			</div>
+		</div>
+
+
+	<script src="script-girar-pagina.js"></script>
+	
+</body>
+</html>
